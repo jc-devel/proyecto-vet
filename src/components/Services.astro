@@ -1,0 +1,26 @@
+---
+// src/components/Services.astro
+const services = [
+	{ name: 'Vacunaciones', icon: '💉' },
+	{ name: 'Desparasitaciones', icon: '🦠' },
+	{ name: 'Certificado de viajes', icon: '✈️' },
+	{ name: 'Extracción de puntos', icon: '🩹' },
+	{ name: 'Corte de uñas', icon: '✂️' },
+	{ name: 'Petsitters', icon: '🐾' },
+];
+---
+
+<section id="servicios" class="py-20">
+	<div class="container mx-auto">
+		<h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">Nuestros Servicios</h2>
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+			{services.map((service, index) => (
+				<div class="bg-primary-100 p-6 rounded-lg shadow-2xl">
+					<div class="text-4xl mb-4">{service.icon}</div>
+					<h3 class="text-xl font-semibold mb-2">{service.name}</h3>
+					<p class="text-gray-600">Servicio profesional a domicilio para la comodidad de tu mascota.</p>
+				</div>
+			))}
+		</div>
+	</div>
+</section>
